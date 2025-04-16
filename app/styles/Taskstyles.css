@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.popup {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 20;
+    width: 90%;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#results {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+#results li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+#results li:hover {
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+calendar-container {
+    padding: 10px;
+}
+
+.Calendar-Day {
+    background-color: white;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    position: relative;
+}
+
+.Calendar-Day.today {
+    border-left: 5px solid #4285f4;
+}
+
+.Calendar-Day.overdue {
+    border-left: 5px solid #ea4335;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: none;
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.Calendar-Day.open .task-list {
+    display: block;
+}
+
+.tab-content {
+    display: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.task-item {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.task-item:hover {
+    background-color: #eee;
+}
+
+.priority-1 { border-left: 3px solid #ea4335; }
+.priority-2 { border-left: 3px solid #fbbc05; }
+.priority-3 { border-left: 3px solid #34a853; }
+.priority-4 { border-left: 3px solid #4285f4; }
+.priority-5 { border-left: 3px solid #9e9e9e; }
+
+#Task-form {
+    padding: 10px;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#Task-form input, #Task-form select, #Task-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#Task-form button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.filters select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
